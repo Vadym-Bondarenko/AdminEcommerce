@@ -1,0 +1,29 @@
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+@mixin flex_mixin {
+    /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -webkit-box;
+    /* TWEENER - IE 10 */
+    display: -ms-flexbox;
+    /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/// @parameter {float} $duration -- Número de segundo que dura la animación
+@mixin setDuration($duration) {
+    transition-duration: #{$duration+"s"};
+}
+
+/// Mixin para posicionado de un elemento en el centro de la página
+@mixin centrado() {
+    margin: 0 auto;
+}
+
+/// Mixin para añadir un border determinado de un color y con una anchura da
+/// @parameter {integer} $anchura -- Anchura en píxeles del borde a añadir
+/// @parameter {color} $color -- Color del borde a añadir
+@mixin addBorder($anchura, $color) {
+    border: #{$anchura+"px"} solid #{$color};
+}
